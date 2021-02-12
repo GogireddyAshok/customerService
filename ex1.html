@@ -1,0 +1,118 @@
+
+<html>
+<head>
+<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-replace-svg="nest"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<style>
+{
+box-sizing: border-box;
+}
+.header {
+  background-color:#E8E8E8;
+  padding: 30px 40px;
+  color: black;
+  text-align: center;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  border: 1px solid green;
+}
+
+.addBtn {
+  padding: 10px;
+  width: 10%;
+  color: green;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid green;
+}
+.clrBtn {
+  margin-top: 20px;
+  padding: 10px;
+  width: 10%;
+  color: green;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius:3px;
+  border: 1px solid green;
+}
+.addBtn:hover {
+  background-color: #bbb;
+}
+</style>
+<script>
+var data = new Array(); // creating array
+
+function add_element(){
+data.push(document.getElementById('text1').value); // adding element to array
+document.getElementById('text1').value=''; // Making the text box blank
+disp(); // displaying the array elements
+}
+
+function disp(){
+var str='';
+str = 'total number of elements in data array : ' + data.length + '<br>';
+for (i=0;i<data.length;i++) 
+{ 
+str += i + ':'+data[i] + "<br >";  // adding each element with key number to variable
+} 
+
+document.getElementById('disp').innerHTML=str; // Display the elements of the array
+}
+</script>
+</script>
+</head>
+<body style="background-color:	#E8E8E8;">
+<div class="content">
+<div id="myDIV" class="header">
+  <h2>To Do List</h2>
+  <input type="text" id="text1" placeholder="Title...">
+  <input type="button" id="button1" value="Add" onclick="add_element();" class="addBtn";></input>
+</div>
+</body>
+</html>
+<ul id="myUL">
+  <li>Do 100 JavaScript Projects
+<div style="float: right">
+  <i class="far fa-check-circle" style="color: green;"></i>
+  <i class="far fa-edit" style="color: blue;"></i>
+  <i class="far fa-times-circle" style="color: red;"></i>
+</div>
+</li>
+  <li>Learn NodesJS
+<div style="float: right">
+  <i class="far fa-check-circle" style="color: green;"></i>
+  <i class="far fa-edit" style="color: blue;"></i>
+  <i class="far fa-times-circle" style="color: red;"></i>
+</div></li>
+  <li>Learn ReactJS
+<div style="float: right">
+  <i class="far fa-check-circle" style="color: green;"></i>
+  <i class="far fa-edit" style="color: blue;"></i>
+  <i class="far fa-times-circle" style="color: red;"></i>
+</div></li>
+  <li>Learn GraphQLS
+<div style="float: right">
+  <i class="far fa-check-circle" style="color: green;"></i>
+  <i class="far fa-edit" style="color: blue;"></i>
+  <i class="far fa-times-circle" style="color: red;"></i>
+</div></li>

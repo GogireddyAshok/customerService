@@ -1,0 +1,29 @@
+<div class="filter-container">
+    Filter: <input [formControl]="filter" type="text" value="" (change)="filters()">
+</div>
+
+<table class="list-container">
+    <th></th>
+    <th>ID</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Emailaddress</th>
+    <th>Gender</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <tr *ngFor="let ar of (customerService.dataFilter | async);"> 
+        <td>            
+           <img *ngIf="ar.gender === 'Male'" src="assets/images/male.jpg">
+           <img *ngIf="ar.gender === 'Female'" src="assets/images/female.png">
+        </td>
+        <td><a [routerLink]= "['/customer/list', ar.id ]" >{{ar.id}}</a></td>
+        <td class="name-container">{{ar.firstname}}</td>
+        <td>{{ar.lastname}}</td>
+        <td>{{ar.emailaddress}}</td>
+        <td>{{ar.gender}}</td>
+        <td>{{ar.address}}</td>
+        <td>{{ar.city}}</td>
+        <td>{{ar.state}}</td>
+    </tr>
+</table>

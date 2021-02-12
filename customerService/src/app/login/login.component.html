@@ -1,0 +1,16 @@
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<form class="connection">
+    <div class="login">
+        <label>User name</label>
+        <input type="text" name="username" [(ngModel)]="username">
+    </div>
+    <div class="login">
+        <label>Password</label>
+        <input type="password"name="password" [(ngModel)]="password">
+    </div>
+    <div class="log">
+        <button type="submit" name="login" value="Login" (click)="loginuser()">Login</button>
+    </div>
+</form>
+</body>

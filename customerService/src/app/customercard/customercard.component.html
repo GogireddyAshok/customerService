@@ -1,0 +1,28 @@
+<div class="grid-container">
+    <div class="container" *ngFor="let ar of arr">
+        <div class="header-container">
+            <span>
+                {{ar.firstname +" "+ ar.lastname}}
+            </span>
+           <div [routerLink]="['/customer/card/edit', ar.id]"><i class="fas fa-edit" aria-hidden="true"></i></div>
+        </div>
+        <div class="content">
+            
+            <div class="image-container">
+                <img *ngIf="ar.gender == 'Male'" src="assets/images/male.jpg">
+                <img *ngIf="ar.gender == 'Female'" src="assets/images/female.png">
+                        </div>
+                        <div class="name-container">
+                            <span>
+                                {{ar.firstname }}
+                            </span>
+                            <span>
+                                {{ar.lastname}}
+                            </span>
+                            <span class="view-orders">
+                                View Orders
+                            </span>
+                        </div>
+            
+        </div>
+    </div></div>

@@ -1,0 +1,26 @@
+.head
+{  
+    margin: 0%;
+     width: 100%;
+    float: left;
+    background-color: blue;
+    float: none;
+    color: white;
+    font-size: 12pt;
+}
+.apptitle
+{
+    line-height: 50px;
+    position: absolute;
+    float: left;
+    margin: 0%;
+}
+.navbar-item
+{   
+    position: relative;
+    float: right;
+    overflow: hidden;
+    line-height: 50px;
+    color: white;
+    margin: 0%;
+}

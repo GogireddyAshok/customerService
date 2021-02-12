@@ -1,0 +1,34 @@
+<div class="menu-container">    
+    <div class="menu-list">
+     <i class="fa fa-th" aria-hidden="true"></i>
+     <span (click)="grid()">Card view</span>
+    </div>
+    <div class="menu-list">
+     <i class="fas fa-list" aria-hidden="true"></i>
+     <span (click)="list()">List view</span>
+    </div>
+    <div class="menu-list">
+     <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+     <span >Map view</span>
+    </div>
+    <div class="menu-list">
+     <i class="fas fa-plus" aria-hidden="true"></i>
+     <span (click)="new()" >New Customer</span>
+    </div>
+</div>
+<div>
+    <div *ngIf="(customerservice.viewtype | async)=== viewtype.list">
+        <app-customerlist (filterData)="customerservice.filterData($event)">
+        </app-customerlist>
+    </div>
+    
+    <div *ngIf="(customerservice.viewtype | async)=== viewtype.grid">
+        <app-customercard (updateData)="customerservice.updateData($event)">
+        </app-customercard>
+    </div>
+    
+    <div *ngIf="(customerservice.viewtype | async)=== viewtype.new">
+        <app-customerform (arr)="customerservice.additem($event)" (cancel)="customerservice.cancel()" (deleteElement)="customerservice.delete($event)">
+        </app-customerform>
+    </div>
+ </div>

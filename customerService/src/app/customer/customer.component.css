@@ -1,0 +1,28 @@
+.ti
+{   
+    margin: 0%;
+    position: absolute;
+    font-size: 30px;
+    float: left;
+    line-height: 50px;
+}
+.Grid
+{
+    position: absolute;
+    float: left;
+    background: transparent ;
+    border: none;
+}
+.add
+{
+    position: absolute ;
+    float: left;
+    background: transparent ;
+    border: none;
+}
+.menu-container{
+    display: inline-flex;
+}
+.menu-list{
+    margin: 10px;
+}

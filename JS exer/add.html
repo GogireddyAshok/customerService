@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<script src="./add.js"></script>
+<link rel="stylesheet" href="add.css">
+</head>
+<body>
+<div>
+</div>
+<div id="d1">
+<p>Enter array size : <input type="text" id="num1" class="text_input" onkeypress="return CheckNumericValue(event)"></input></p>
+
+<p>Enter Number:
+<input type="text" id="num" class="text_input" onkeypress="return CheckNumericValue(event)"></input>
+</p>
+</div>
+<div>
+<input type="button" id="button1" value="Add" class="addbtn" onclick="add_element_to_array();"></input>
+<input type="button" id="button2" value="Calculate" class="cal" onclick="calculate_array();"></input>
+</div>
+<div>
+<input type="button" id="button3" value="Maximum" class="ma" onclick="maximum_array();"></input>
+<input type="button" id="button4" value="Minimum" class="mi" onclick="minimum_array();"></input>
+<input type="button" id="button5" value="Average" class="av" onclick="avg_array();"></input>
+</div>
+</body>
+</html>

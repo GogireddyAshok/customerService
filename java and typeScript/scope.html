@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+<html>
+
+<body>
+<script>
+document.write("Sample For Scopes");
+
+var a="10";
+var b;
+
+b=a;
+
+function great(name)
+{
+console.log(name);
+}
+great();
+document.write(b);
+document.write("");
+
+//global scope
+var a=10;
+function myfun(){
+var b=a;
+console.log(b);
+c=100;
+}
+
+myfun();
+
+
+//closure
+var a=100;
+
+function outer(){
+var b=20;
+function inner(){
+console.log(a);
+console.log(b);
+}
+return inner();
+}
+var innerfn = outer();
+
+//callback
+var m=10;
+var fn=function()
+{
+document.write("done with the function");
+}
+setTimeout(fn,6000);
+document.write(m);
+</script>  
+</body>
+</html>

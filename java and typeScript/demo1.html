@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html>
+
+<body>
+
+ 
+<script>
+//function in objects
+var myobj ={
+"testProp": true
+};
+
+myobj.mymethod=function()
+{
+console.log("function in object");
+};
+
+myobj.mymethod();
+
+var person={
+"Firstname":"Ashok",
+"lastname":"Gogireddy",
+"getfullname":function(){
+return this.Firstname+" "+this.lastname;
+},
+address:{
+"street":"76-8/1-38",
+"city":"Vijayawada",
+"state":"ap"
+},
+"isfromstate":function(state){
+if(this.address.state == state)
+{
+return true;
+}
+else
+{
+return false;
+}
+}
+};
+
+console.log(person.isfromstate("ap"));
+document.write(person.isfromstate("ap"));
+
+var fullname = person.getfullname();
+console.log(fullname);
+var person2=person;
+person={};
+
+document.write(fullname);
+
+var myarray=[10,20,"hi"];
+document.write(myarray);
+var myfunction =function(item){
+console.log("for an element"+item);
+};
+myarray.forEach(myfunction);
+
+var today=new Date();
+document.write(today);
+</script>
+
+
+
+</body>
+
+</html>

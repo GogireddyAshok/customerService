@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<script src="./exrersice2.js"></script>
+<style>
+{
+box-sizing: border-box;
+}
+
+.text_input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid black 1px;
+}
+</style>
+</head>
+<body>
+<div>
+<p>Enter Number:
+<input type="text" id="num" class="text_input" onkeypress="return CheckNumericValue(event)"></input>
+</p>
+</div>
+<div>
+<input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+<input type="button" id="button2" value="Calculate" onclick="calculate_array();"></input>
+</div>
+<div id="Result"></div> 
+</body>
+</html>

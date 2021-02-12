@@ -1,0 +1,35 @@
+<gh'<gh'document.getElementsByTagName("p")[this].innerHTML<gh' = "tag name";
+<html>
+<body>
+<div id="main">
+<p>dom example</p>
+</div>
+<p class="intro">element by class.</p>
+<p id="demo"></p>
+<h1 id="id01">Old Heading</h1>
+
+<script>
+var x = document.getElementById("main");
+var y = x.getElementsByTagName("p");
+var z = document.getElementsByClassName("intro");
+var p = document.querySelectorAll("p.intro");
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) with class="intro": ' + p[0].innerHTML;
+document.getElementById("demo").innerHTML=
+"Get Element by id";
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) with class="intro": ' + z[0].innerHTML;
+
+document.write(Date());
+
+document.getElementById("id01").style.color = "blue";
+
+
+var element = document.getElementById("id01");
+element.innerHTML = "DOM MODEL";
+</script>
+</script>
+</body>
+</html>

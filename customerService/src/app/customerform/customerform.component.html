@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<div class="CustomerForm" *ngIf="customerform">
+ <h2> New Customer</h2>
+    <form #userform="ngForm" [formGroup]="customerform">
+    <div class="form-group">
+      <label>First Name</label>
+      <input formControlName="firstname" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input formControlName="lastname" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+       <label>Email address</label>
+       <input formControlName="emailaddress" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Gender</label>
+        <div>
+            <input formControlName="gender" type="radio" value="Male"><label>male</label>
+        </div>
+        <div>
+            <input formControlName="gender" type="radio"  value="Female"><label>Female</label>
+        </div>
+    </div>
+        <div class="form-group">
+            <label>Address</label>
+            <input formControlName="address" type="text" class="form-control">
+        </div>
+       <div class="form-group">
+            <label>City</label>
+            <input formControlName="city" type="text" class="form-control">
+       </div>
+        <div class="form-group">
+            <label>State</label>
+            <input formControlName="state" type="text" class="form-control">
+        </div>
+        <div class="btn-container">
+            <button class="btn-primary delete-btn" *ngIf="formData.firstname" (click)="delete()">Delete</button>
+        <div class="create-btn">
+            <button (click)="cancelAdd()">Cancel</button>
+            <button [disabled]="!(userform.valid && userform.dirty)" class="btn-primary" type="submit" (click)="onSubmit()">{{ formData.firstname?'Update':'Create'}}</button>
+        </div>
+        </div>
+    </form>
+</div>
